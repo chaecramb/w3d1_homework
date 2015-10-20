@@ -65,6 +65,12 @@ g.player1 = gets.chomp
 puts "What is player 2's name?"
 g.player2 = gets.chomp
 
+until g.valid_name?
+puts "Player 2's name must be different from player 1."
+  puts "What is player 2's name?"
+  g.player2 = gets.chomp
+end
+
 until g.finished?
   puts `clear`
   print_board(g)

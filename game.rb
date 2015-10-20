@@ -8,6 +8,10 @@ class Game
     @moves = []
   end
 
+  def valid_name?
+    !(player1 == player2)
+  end
+
   def whose_turn
     return player1 if moves.empty?
     moves.last.player == player1 ? player2 : player1
