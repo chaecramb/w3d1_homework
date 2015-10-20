@@ -31,7 +31,6 @@ class Game
 
   def valid_move?(player, square)
      !square_taken?(square) && !finished? && correct_player?(player) &&on_board?(square)
-    # make sure players move, make sure game not finished
   end
 
   def make_move(player, square)
